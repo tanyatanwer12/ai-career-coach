@@ -4,6 +4,8 @@ import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { generateAIInsights } from "./dashboard";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export async function updateUser(data) {
   const { userId } = await auth();
